@@ -9,16 +9,29 @@
 
 <body>
     <p id="demo"></p>
+    <p id="user"></p>
     <script text="text/javascript">
         console.log(navigator);
         let firstPlatformCharacter = navigator.platform.toLowerCase().charAt(0);
         if (firstPlatformCharacter === "w") {
             document.getElementById("demo").innerHTML = "Welcome, Windows user!";
-        } else if (firstPlatformCharacter === "m") { 
-            document.getElementById("demo").innerHTML = "Welcome, Mac user!"; 
-        } else {document.getElementById("demo").innerHTML = "Welcome, alien!";}
+        } else if (firstPlatformCharacter === "m") {
+            document.getElementById("demo").innerHTML = "Welcome, Mac user!";
+        } else { document.getElementById("demo").innerHTML = "Welcome, alien!"; }
         console.log(navigator.platform);
-        console.log(navigator.geolocation.getCurrentPosition());
+
+        //another way:
+       /*  if (navigator.userAgent.indexOf("Windows") !== -1) {
+            alert("Welcome, Windows user!");
+        } else if (navigator.userAgent.indexOf("Mac") !== -1) {
+            alert("Welcome, Mac user!");
+        } else alert { ("I don't know what you're using"); } */
+
+
+        // get user's info
+        document.getElementById("user").innerHTML = navigator.userAgent;
+
+        
     </script>
 </body>
 
