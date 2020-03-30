@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script text="text/javascript">
+        console.log(navigator);
+        let firstPlatformCharacter = navigator.platform.toLowerCase().charAt(0);
+        if (firstPlatformCharacter === "w") {
+            document.getElementById("demo").innerHTML = "Welcome, Windows user!";
+        } else if (firstPlatformCharacter === "m") { 
+            document.getElementById("demo").innerHTML = "Welcome, Mac user!"; 
+        } else {document.getElementById("demo").innerHTML = "Welcome, alien!";}
+        console.log(navigator.platform);
+        console.log(navigator.geolocation.getCurrentPosition());
+    </script>
+</body>
+
+</html>
