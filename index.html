@@ -34,26 +34,26 @@
         console.log(navigator.geolocation);
         console.log(navigator.geolocation.getCurrentPosition(showPosition));
 
-        /*function getLocation() {
+        function getLocation() {
             //checking if geolocation property exists in navigator (not every browser supports it);
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(showPosition);
-            } else {alert ("Geolocation is not supported by this browser!");}
+            } else { alert("Geolocation is not supported by this browser!"); }
         }
         function showPosition(position) {
             //grab coordinates from object
             let lat = position.coords.latitude;
             let lon = position.coords.longtitude;
             console.log(lat, lon);
-            redirect(lan, lon);
+            redirect(lat, lon);
         }
-        function redirect(lan, lon) {
+        function redirect(lat, lon) {
             if (lat >= 30 && lon >= 90) {
-                window.location.href = westcoast.html;
+                location.href = "westcoast.html";
             } else {
-                window.location.href = "eastcoast.html";
+                location.href = "eastcoast.html";
             }
-        }*/
+        }
     </script>
 </body>
 
