@@ -21,17 +21,39 @@
         console.log(navigator.platform);
 
         //another way:
-       /*  if (navigator.userAgent.indexOf("Windows") !== -1) {
-            alert("Welcome, Windows user!");
-        } else if (navigator.userAgent.indexOf("Mac") !== -1) {
-            alert("Welcome, Mac user!");
-        } else alert { ("I don't know what you're using"); } */
-
+        /*  if (navigator.userAgent.indexOf("Windows") !== -1) {
+             alert("Welcome, Windows user!");
+         } else if (navigator.userAgent.indexOf("Mac") !== -1) {
+             alert("Welcome, Mac user!");
+         } else alert { ("I don't know what you're using"); } */
 
         // get user's info
         document.getElementById("user").innerHTML = navigator.userAgent;
 
-        
+        // get geolocation
+        console.log(navigator.geolocation);
+        console.log(navigator.geolocation.getCurrentPosition(showPosition));
+
+        /*function getLocation() {
+            //checking if geolocation property exists in navigator (not every browser supports it);
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {alert ("Geolocation is not supported by this browser!");}
+        }
+        function showPosition(position) {
+            //grab coordinates from object
+            let lat = position.coords.latitude;
+            let lon = position.coords.longtitude;
+            console.log(lat, lon);
+            redirect(lan, lon);
+        }
+        function redirect(lan, lon) {
+            if (lat >= 30 && lon >= 90) {
+                window.location.href = westcoast.html;
+            } else {
+                window.location.href = "eastcoast.html";
+            }
+        }*/
     </script>
 </body>
 
